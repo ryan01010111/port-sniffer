@@ -27,8 +27,9 @@ impl Arguments {
     } else {
       if (arg1.contains("-h") || arg1.contains("-help")) && args.len() == 2 {
         println!(
-          "Usage: port_sniffer [OPTIONS] <IP address>
-                    \r\n -t    number of threads to use"
+          "\nUsage: port_sniffer [OPTIONS] <IP address>
+          \r\nOptions:
+          \r  -t    number of threads to use (default: 4)"
         );
         return Err("help");
       } else if arg1.contains("-h") || arg1.contains("-help") {
